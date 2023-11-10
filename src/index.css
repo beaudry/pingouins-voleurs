@@ -25,14 +25,15 @@ h1 {
 }
 
 .carte {
-  aspect-ratio: 43/50;
+  height: 220px;
   border-width: 3px;
   border-color: lightblue;
-  border-style: dashed;
+  border-style: ridge;
   padding: 1em;
-  width: 200px;
+  width: 220px;
   display: flex;
   flex-direction: column;
+  break-inside: avoid-page;
 }
 
 p {
