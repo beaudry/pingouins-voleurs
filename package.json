@@ -21,6 +21,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-sort-keys": "^2.3.5",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
   },
@@ -41,13 +42,21 @@
       "project": "./tsconfig.json"
     },
     "plugins": [
-      "@typescript-eslint"
+      "@typescript-eslint",
+      "sort-keys"
     ],
     "root": true,
     "rules": {
+      "@typescript-eslint/quotes": [
+        "error",
+        "double"
+      ],
+      "max-len": "off",
       "jsx-a11y/alt-text": "off",
       "react/button-has-type": "off",
-      "react/no-unescaped-entities": "off"
+      "react/no-unescaped-entities": "off",
+      "sort-keys": "off",
+      "sort-keys/sort-keys-fix": "error"
     }
   }
 }
