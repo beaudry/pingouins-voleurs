@@ -14,8 +14,9 @@
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.5.0",
-    "eslint": "^8.2.0",
+    "eslint": "^8.53.0",
     "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
@@ -31,12 +32,22 @@
       "eslint:recommended",
       "plugin:@typescript-eslint/recommended",
       "airbnb",
-      "airbnb/hooks"
+      "airbnb/hooks",
+      "airbnb-typescript",
+      "plugin:react/jsx-runtime"
     ],
     "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
     "plugins": [
       "@typescript-eslint"
     ],
-    "root": true
+    "root": true,
+    "rules": {
+      "jsx-a11y/alt-text": "off",
+      "react/button-has-type": "off",
+      "react/no-unescaped-entities": "off"
+    }
   }
 }
