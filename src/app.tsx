@@ -300,16 +300,116 @@ const outils: Outil[] = [
     ),
     nom: "Tuque",
   },
-  { image: poele, nom: "Poêle à bois" },
-  { image: sac, nom: "Sac à dos" },
-  { nom: "Brouette" },
-  { nom: "Carzy Carpet" },
-  { nom: "Poisson séché" },
-  { nom: "Carte au trésor" },
-  { nom: "Canne à pêche" },
-  { nom: "Planches de bois" },
-  { nom: "Gros bouchon de liège" },
-  { nom: "Boule de neige" },
+  {
+    description: <>Installe-le dans un igloo pour faire fondre une boite par tour. Le pingouin doit retourner chez lui pour l'éteindre.</>,
+    image: poele,
+    momentUtilisation: <>S'utilise dans un igloo</>,
+    nom: "Poêle à bois",
+  },
+  {
+    apresUtilisation: ressources.apresUtilisations.defausser,
+    description: (
+      <>
+        Il te permet de déplacer une
+        {" "}
+        {motsCles.boite}
+        {" "}
+        supplémentaire.
+      </>
+    ),
+    image: sac,
+    momentUtilisation: (
+      <>
+        S'utilise chez
+        {" "}
+        <strong>Iglea</strong>
+      </>
+    ),
+    nom: "Sac à dos",
+  },
+  {
+    apresUtilisation: ressources.apresUtilisations.defausser,
+    description: <>Si un pingouin se trouve sur ta case, tu peux le déplacer avec toi lors de ton tour.</>,
+    momentUtilisation: (
+      <>
+        S'utilise
+        {" "}
+        <strong>avant</strong>
+        {" "}
+        un
+        {" "}
+        <strong>déplacement</strong>
+      </>
+    ),
+    nom: "Brouette",
+  },
+  {
+    apresUtilisation: ressources.apresUtilisations.defausser,
+    description: <>Glisse jusqu'au bout d'un chemin.</>,
+    momentUtilisation: (
+      <>
+        <strong>Remplace</strong>
+        {" "}
+        un lancer de dé
+      </>
+    ),
+    nom: "Carzy Carpet",
+  },
+  {
+    apresUtilisation: ressources.apresUtilisations.defausser,
+    description: <>En agitant le sac, tu convaincs un pingouin d'avancer dans ta direction lors de son tour.</>,
+    momentUtilisation: ressources.momentsUtilisations.nImporteQuand,
+    nom: "Poisson séché",
+  },
+  {
+    apresUtilisation: ressources.apresUtilisations.defausser,
+    description: <>Dévoile une case de ton choix.</>,
+    momentUtilisation: ressources.momentsUtilisations.nImporteQuand,
+    nom: "Carte au trésor",
+  },
+  {
+    apresUtilisation: ressources.apresUtilisations.defausser,
+    description: <>Tu pêches un outil qui se trouve dans l'inventaire d'un pingouin de ton choix.</>,
+    momentUtilisation: ressources.momentsUtilisations.nImporteQuand,
+    nom: "Canne à pêche",
+  },
+  {
+    apresUtilisation: ressources.apresUtilisations.defausser,
+    description: <>Tu t'enfermes dans un igloo jusqu'à ton prochain tour. Aucun pingouin ne peut entrer ou sortir.</>,
+    momentUtilisation: (<>S'utilise dans un igloo</>),
+    nom: "Planches de bois",
+  },
+  {
+    apresUtilisation: ressources.apresUtilisations.defausser,
+    description: (
+      <>
+        Permet de
+        {" "}
+        <strong>boucher un trou</strong>
+        {" "}
+        de façon permanente.
+      </>
+    ),
+    momentUtilisation: (<>S'utilise sur une case trou</>),
+    nom: "Gros bouchon de liège",
+  },
+  {
+    apresUtilisation: ressources.apresUtilisations.defausser,
+    description: (
+      <>
+        Vise un pingouin qui transporte une
+        {" "}
+        {motsCles.boite}
+        . Le pingouin tombe à l'eau, la
+        {" "}
+        {motsCles.boite}
+        {" "}
+        reste sur la case.
+      </>
+    ),
+    momentUtilisation: ressources.momentsUtilisations.nImporteQuand,
+    nom: "Boule de neige",
+  },
 ];
 
 function App() {
