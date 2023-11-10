@@ -245,8 +245,61 @@ const outils: Outil[] = [
     momentUtilisation: ressources.momentsUtilisations.apresDeplacement,
     nom: "Pelle",
   },
-  { image: perceuse, nom: "Perceuse à glace" },
-  { image: tuque, nom: "Tuque" },
+  {
+    apresUtilisation: ressources.apresUtilisations.defausser,
+    description: (
+      <>
+        Transforme la case sur laquelle tu tiens en
+        {" "}
+        <strong>trou</strong>
+        . Tu rentres dedans.
+      </>
+    ),
+    image: perceuse,
+    momentUtilisation: (
+      <>
+        S'utilise
+        {" "}
+        <strong>avant</strong>
+        {" "}
+        ou
+        {" "}
+        <strong>après</strong>
+        {" "}
+        un
+        {" "}
+        <strong>déplacement</strong>
+      </>
+    ),
+    nom: "Perceuse à glace",
+
+  },
+  {
+    apresUtilisation: (
+      <>
+        Garder dans son
+        {" "}
+        <strong>inventaire</strong>
+      </>
+    ),
+    description: (
+      <>
+        Cette tuque est vraiment
+        {" "}
+        <strong>très jolie</strong>
+        .
+      </>
+    ),
+    image: tuque,
+    momentUtilisation: (
+      <>
+        S'utilise
+        {" "}
+        <strong>immédiatement</strong>
+      </>
+    ),
+    nom: "Tuque",
+  },
   { image: poele, nom: "Poêle à bois" },
   { image: sac, nom: "Sac à dos" },
   { nom: "Brouette" },
