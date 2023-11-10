@@ -249,7 +249,7 @@ const outils: Outil[] = [
     apresUtilisation: ressources.apresUtilisations.defausser,
     description: (
       <>
-        Transforme la case sur laquelle tu tiens en
+        Transforme la case sur laquelle tu te tiens en
         {" "}
         <strong>trou</strong>
         . Tu rentres dedans.
