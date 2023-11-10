@@ -69,7 +69,7 @@ const outils: Outil[] = [
         {" "}
         <strong>lors</strong>
         {" "}
-        du
+        d'un
         {" "}
         <strong>déplacement</strong>
       </>
@@ -97,9 +97,11 @@ const outils: Outil[] = [
   {
     apresUtilisation: (
       <>
-        La personne
+        Placer dans
         {" "}
-        <b>l'obtient</b>
+        <strong>l'inventaire</strong>
+        {" "}
+        du propriétaire
       </>
     ),
     description: (
@@ -157,7 +159,7 @@ const outils: Outil[] = [
         {" "}
         <strong>avant</strong>
         {" "}
-        le
+        un
         {" "}
         <strong>déplacement</strong>
       </>
@@ -199,6 +201,13 @@ const outils: Outil[] = [
     nom: "Canon à neige",
   },
   {
+    momentUtilisation: (
+      <>
+        S'utilise chez
+        {" "}
+        <strong>Iglea</strong>
+      </>
+    ),
     nom: "Photo comprommetante",
   },
   { image: pelle, nom: "Pelle" },
@@ -225,9 +234,11 @@ function App() {
       {outils.map((carte) => (
         <div className="carte">
           <h1>{carte.nom}</h1>
-          <p><i>{carte.momentUtilisation}</i></p>
-          <p>{carte.description}</p>
-          <p><i>{carte.apresUtilisation}</i></p>
+          <div className="instructions">
+            <p><i>{carte.momentUtilisation}</i></p>
+            <p>{carte.description}</p>
+            <p><i>{carte.apresUtilisation}</i></p>
+          </div>
         </div>
       ))}
     </div>
