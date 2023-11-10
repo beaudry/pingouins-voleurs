@@ -34,7 +34,7 @@ const ressources = {
       <>
         S'utilise
         {" "}
-        <strong>chez quelqu'un d'autre</strong>
+        <strong>chez un autre pingouin</strong>
       </>
     ),
     nImporteQuand: (
@@ -108,7 +108,7 @@ const outils: Outil[] = [
       <>
         Dépose-la
         {" "}
-        <strong>chez quelqu'un</strong>
+        <strong>chez un pingouin</strong>
         {" "}
         et il va
         {" "}
@@ -146,7 +146,7 @@ const outils: Outil[] = [
         {" "}
         <strong>{motsCles.trebucher}</strong>
         {" "}
-        tous les joueurs que tu rencontres lors de ce
+        tous les pingouins que tu rencontres lors de ce
         {" "}
         <strong>déplacement</strong>
         .
@@ -184,7 +184,7 @@ const outils: Outil[] = [
     apresUtilisation: ressources.apresUtilisations.defausser,
     description: (
       <>
-        Tire sur l'igloo de quelqu'un. Il
+        Tire sur l'igloo d'un pingouin. Il
         {" "}
         <strong>perd</strong>
         {" "}
@@ -201,14 +201,28 @@ const outils: Outil[] = [
     nom: "Canon à neige",
   },
   {
+    apresUtilisation: ressources.apresUtilisations.defausser,
+    description: (
+      <>
+        Le vendeur te laisse
+        {" "}
+        <strong>regarder</strong>
+        {" "}
+        dans les
+        {" "}
+        <strong>deux premières</strong>
+        {" "}
+        {motsCles.boite}
+        s et de choisir laquelle prendre.
+      </>
+    ),
     momentUtilisation: (
       <>
         S'utilise chez
         {" "}
         <strong>Iglea</strong>
-      </>
-    ),
-    nom: "Photo comprommetante",
+      </>),
+    nom: "Photo comprommettante",
   },
   { image: pelle, nom: "Pelle" },
   { image: perceuse, nom: "Perceuse à glace" },
