@@ -28,8 +28,28 @@ type Outil = {
 const ressources = {
   apresUtilisations: {
     defausser: "Défausser après utilisation",
+    inventaireProprietaire: (
+      <>
+        Placer dans
+        {" "}
+        <strong>l'inventaire</strong>
+        {" "}
+        du propriétaire
+      </>
+    ),
   },
   momentsUtilisations: {
+    apresDeplacement: (
+      <>
+        S'utilise
+        {" "}
+        <strong>avant</strong>
+        {" "}
+        un
+        {" "}
+        <strong>déplacement</strong>
+      </>
+    ),
     chezQuelquUnDAutre: (
       <>
         S'utilise
@@ -95,15 +115,7 @@ const outils: Outil[] = [
     nom: "Pierre de curling",
   },
   {
-    apresUtilisation: (
-      <>
-        Placer dans
-        {" "}
-        <strong>l'inventaire</strong>
-        {" "}
-        du propriétaire
-      </>
-    ),
+    apresUtilisation: ressources.apresUtilisations.inventaireProprietaire,
     description: (
       <>
         Dépose-la
@@ -153,17 +165,7 @@ const outils: Outil[] = [
       </>
     ),
     image: charrue,
-    momentUtilisation: (
-      <>
-        S'utilise
-        {" "}
-        <strong>avant</strong>
-        {" "}
-        un
-        {" "}
-        <strong>déplacement</strong>
-      </>
-    ),
+    momentUtilisation: ressources.momentsUtilisations.apresDeplacement,
     nom: "Charrue",
   },
   {
@@ -224,7 +226,25 @@ const outils: Outil[] = [
       </>),
     nom: "Photo comprommettante",
   },
-  { image: pelle, nom: "Pelle" },
+  {
+    apresUtilisation: ressources.apresUtilisations.defausser,
+    description: (
+      <>
+        Permet de
+        {" "}
+        <strong>cacher</strong>
+        {" "}
+        ce que tu
+        {" "}
+        <strong>transportes</strong>
+        {" "}
+        sur ta case. Un pingouin qui atterrit dessus peux repartir avec.
+      </>
+    ),
+    image: pelle,
+    momentUtilisation: ressources.momentsUtilisations.apresDeplacement,
+    nom: "Pelle",
+  },
   { image: perceuse, nom: "Perceuse à glace" },
   { image: tuque, nom: "Tuque" },
   { image: poele, nom: "Poêle à bois" },
