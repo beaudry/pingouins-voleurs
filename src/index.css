@@ -36,10 +36,10 @@ h1 {
 }
 
 .instructions {
+  justify-content: center;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .instructions p {

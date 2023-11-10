@@ -13,8 +13,8 @@ import truite from "./images/truite.jfif";
 
 const motsCles = {
   boite: "boîte",
-  trebuche: "trébuche",
-  trebucher: "trébucher",
+  tombe: "tombe",
+  tomber: "tomber",
 };
 
 type Outil = {
@@ -50,11 +50,18 @@ const ressources = {
         <strong>déplacement</strong>
       </>
     ),
-    chezQuelquUnDAutre: (
+    iglea: (
       <>
-        S'utilise
+        S'utilise chez
         {" "}
-        <strong>chez un autre pingouin</strong>
+        <strong>Iglea</strong>
+      </>
+    ),
+    igloo: (
+      <>
+        S'utilise dans un
+        {" "}
+        <strong>igloo</strong>
       </>
     ),
     nImporteQuand: (
@@ -76,7 +83,11 @@ const outils: Outil[] = [
         {" "}
         {motsCles.boite}
         {" "}
-        si tu atteris sur une
+        si tu
+        {" "}
+        <strong>atteris</strong>
+        {" "}
+        sur une
         {" "}
         <strong>case glacée</strong>
         .
@@ -100,13 +111,16 @@ const outils: Outil[] = [
     apresUtilisation: ressources.apresUtilisations.defausser,
     description: (
       <>
-        Lance cette pierre sur un chemin. Le
+        Lance cette pierre sur
+        {" "}
+        <strong>un chemin</strong>
+        . Le
         {" "}
         <strong>premier</strong>
         {" "}
-        pingouin qu'elle rencontre
+        pingouin qu'elle frappe
         {" "}
-        <strong>trébuche</strong>
+        <strong>{motsCles.tombe}</strong>
         .
       </>
     ),
@@ -134,7 +148,7 @@ const outils: Outil[] = [
       </>
     ),
     image: truite,
-    momentUtilisation: ressources.momentsUtilisations.chezQuelquUnDAutre,
+    momentUtilisation: ressources.momentsUtilisations.igloo,
     nom: "Truite d'échange",
   },
   {
@@ -156,7 +170,7 @@ const outils: Outil[] = [
       <>
         Fais
         {" "}
-        <strong>{motsCles.trebucher}</strong>
+        <strong>{motsCles.tomber}</strong>
         {" "}
         tous les pingouins que tu rencontres lors de ce
         {" "}
@@ -179,7 +193,7 @@ const outils: Outil[] = [
         que tu es chez lui.
       </>
     ),
-    momentUtilisation: ressources.momentsUtilisations.chezQuelquUnDAutre,
+    momentUtilisation: ressources.momentsUtilisations.igloo,
     nom: "Peinture blanche",
   },
   {
@@ -218,12 +232,7 @@ const outils: Outil[] = [
         s et de choisir laquelle prendre.
       </>
     ),
-    momentUtilisation: (
-      <>
-        S'utilise chez
-        {" "}
-        <strong>Iglea</strong>
-      </>),
+    momentUtilisation: ressources.momentsUtilisations.iglea,
     nom: "Photo comprommettante",
   },
   {
@@ -232,13 +241,13 @@ const outils: Outil[] = [
       <>
         Permet de
         {" "}
-        <strong>cacher</strong>
+        <strong>laisser</strong>
         {" "}
         ce que tu
         {" "}
         <strong>transportes</strong>
         {" "}
-        sur ta case. Un pingouin qui atterrit dessus peux repartir avec.
+        sur ta case.
       </>
     ),
     image: pelle,
@@ -277,14 +286,14 @@ const outils: Outil[] = [
   {
     apresUtilisation: (
       <>
-        Garder dans son
+        Garder dans ton
         {" "}
         <strong>inventaire</strong>
       </>
     ),
     description: (
       <>
-        Cette tuque est vraiment
+        Cette tuque est
         {" "}
         <strong>très jolie</strong>
         .
@@ -301,16 +310,24 @@ const outils: Outil[] = [
     nom: "Tuque",
   },
   {
-    description: <>Installe-le dans un igloo pour faire fondre une boite par tour. Le pingouin doit retourner chez lui pour l'éteindre.</>,
+    apresUtilisation: ressources.apresUtilisations.inventaireProprietaire,
+    description: (
+      <>
+        Ce poêle fait fondre une boîte par
+        {" "}
+        <strong>ronde</strong>
+        . Un pingouin doit venir l'éteindre.
+      </>
+    ),
     image: poele,
-    momentUtilisation: <>S'utilise dans un igloo</>,
+    momentUtilisation: ressources.momentsUtilisations.igloo,
     nom: "Poêle à bois",
   },
   {
     apresUtilisation: ressources.apresUtilisations.defausser,
     description: (
       <>
-        Il te permet de déplacer une
+        Permet de transporter une
         {" "}
         {motsCles.boite}
         {" "}
@@ -329,7 +346,14 @@ const outils: Outil[] = [
   },
   {
     apresUtilisation: ressources.apresUtilisations.defausser,
-    description: <>Si un pingouin se trouve sur ta case, tu peux le déplacer avec toi lors de ton tour.</>,
+    description: (
+      <>
+        Si un pingouin se trouve sur
+        {" "}
+        <strong>ta case</strong>
+        , tu peux le déplacer avec toi lors de ton tour.
+      </>
+    ),
     momentUtilisation: (
       <>
         S'utilise
@@ -345,7 +369,15 @@ const outils: Outil[] = [
   },
   {
     apresUtilisation: ressources.apresUtilisations.defausser,
-    description: <>Glisse jusqu'au bout d'un chemin.</>,
+    description: (
+      <>
+        Glisse
+        {" "}
+        <strong>jusqu'au bout</strong>
+        {" "}
+        d'un chemin.
+      </>
+    ),
     momentUtilisation: (
       <>
         <strong>Remplace</strong>
@@ -357,9 +389,20 @@ const outils: Outil[] = [
   },
   {
     apresUtilisation: ressources.apresUtilisations.defausser,
-    description: <>En agitant le sac, tu convaincs un pingouin d'avancer dans ta direction lors de son tour.</>,
+    description: (
+      <>
+        Attire le pingouin
+        {" "}
+        <strong>le plus proche</strong>
+        . Il avancera
+        {" "}
+        <strong>vers toi</strong>
+        {" "}
+        à son tour.
+      </>
+    ),
     momentUtilisation: ressources.momentsUtilisations.nImporteQuand,
-    nom: "Poisson séché",
+    nom: "Calmar délicieux",
   },
   {
     apresUtilisation: ressources.apresUtilisations.defausser,
@@ -369,14 +412,53 @@ const outils: Outil[] = [
   },
   {
     apresUtilisation: ressources.apresUtilisations.defausser,
-    description: <>Tu pêches un outil qui se trouve dans l'inventaire d'un pingouin de ton choix.</>,
+    description: (
+      <>
+        Vole un
+        {" "}
+        <strong>outil</strong>
+        {" "}
+        dans
+        {" "}
+        <strong>l'inventaire</strong>
+        {" "}
+        du pingouin de
+        {" "}
+        <strong>ton choix</strong>
+        .
+      </>
+    ),
     momentUtilisation: ressources.momentsUtilisations.nImporteQuand,
     nom: "Canne à pêche",
   },
   {
     apresUtilisation: ressources.apresUtilisations.defausser,
-    description: <>Tu t'enfermes dans un igloo jusqu'à ton prochain tour. Aucun pingouin ne peut entrer ou sortir.</>,
-    momentUtilisation: (<>S'utilise dans un igloo</>),
+    description: (
+      <>
+        Empêchent les pingouins
+        {" "}
+        <strong>d'entrer</strong>
+        {" "}
+        ou de
+        {" "}
+        <strong>sortir</strong>
+        {" "}
+        de l'igloo jusqu'à
+        {" "}
+        <strong>ton prochain tour</strong>
+        .
+      </>
+    ),
+    momentUtilisation: (
+      <>
+        S'utilise
+        {" "}
+        <strong>à la porte</strong>
+        {" "}
+        ou dans un
+        {" "}
+        <strong>igloo</strong>
+      </>),
     nom: "Planches de bois",
   },
   {
@@ -390,17 +472,31 @@ const outils: Outil[] = [
         de façon permanente.
       </>
     ),
-    momentUtilisation: (<>S'utilise sur une case trou</>),
+    momentUtilisation: (
+      <>
+        S'utilise sur une
+        {" "}
+        <strong>case trou</strong>
+      </>
+    ),
     nom: "Gros bouchon de liège",
   },
   {
     apresUtilisation: ressources.apresUtilisations.defausser,
     description: (
       <>
-        Vise un pingouin qui transporte une
+        Fais
+        {" "}
+        {motsCles.tomber}
+        {" "}
+        un pingouin qui
+        {" "}
+        <strong>transporte</strong>
+        {" "}
+        une
         {" "}
         {motsCles.boite}
-        . Le pingouin tombe à l'eau, la
+        . La
         {" "}
         {motsCles.boite}
         {" "}
