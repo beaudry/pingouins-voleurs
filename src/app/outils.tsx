@@ -203,29 +203,6 @@ const outils: Outil[] = [
     apresUtilisation: ressources.apresUtilisations.defausser,
     description: (
       <>
-        Si un pingouin se trouve sur
-        {" "}
-        <strong>ta case</strong>
-        , tu peux le déplacer avec toi lors de ton tour.
-      </>
-    ),
-    momentUtilisation: (
-      <>
-        S'utilise
-        {" "}
-        <strong>avant</strong>
-        {" "}
-        un
-        {" "}
-        <strong>déplacement</strong>
-      </>
-    ),
-    nom: "Brouette",
-  },
-  {
-    apresUtilisation: ressources.apresUtilisations.defausser,
-    description: (
-      <>
         Glisse
         {" "}
         <strong>jusqu'au bout</strong>
