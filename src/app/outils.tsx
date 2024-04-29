@@ -2,7 +2,6 @@ import { ComponentChildren } from "preact";
 import charrue from "../images/charrue.jfif";
 import canon from "../images/canon.jfif";
 import curling from "../images/curling.jfif";
-import pelle from "../images/pelle.jfif";
 import perceuse from "../images/perceuse.jfif";
 import tuque from "../images/tuque.jfif";
 import poele from "../images/poele.jfif";
@@ -152,47 +151,18 @@ const outils: Outil[] = [
     apresUtilisation: ressources.apresUtilisations.defausser,
     description: (
       <>
-        Permet de
-        {" "}
-        <strong>laisser</strong>
-        {" "}
-        ce que tu
-        {" "}
-        <strong>transportes</strong>
-        {" "}
-        sur ta case.
-      </>
-    ),
-    image: pelle,
-    momentUtilisation: ressources.endroitsUtilisation.apresDeplacement,
-    nom: "Pelle",
-  },
-  {
-    apresUtilisation: ressources.apresUtilisations.defausser,
-    description: (
-      <>
         Transforme la case sur laquelle tu te tiens en
         {" "}
         <strong>trou</strong>
-        . Tu rentres dedans.
+        {" "}
+        et utilise-le avant le
+        {" "}
+        <strong>{motsCles.lancerDeDe}</strong>
+        .
       </>
     ),
     image: perceuse,
-    momentUtilisation: (
-      <>
-        S'utilise
-        {" "}
-        <strong>avant</strong>
-        {" "}
-        ou
-        {" "}
-        <strong>après</strong>
-        {" "}
-        un
-        {" "}
-        <strong>déplacement</strong>
-      </>
-    ),
+    momentUtilisation: ressources.endroitsUtilisation.exterieur,
     nom: "Perceuse à glace",
   },
   {

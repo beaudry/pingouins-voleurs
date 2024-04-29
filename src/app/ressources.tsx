@@ -1,3 +1,5 @@
+import motsCles from "./motsCles";
+
 const ressources = {
   apresUtilisations: {
     defausser: "Défausser après utilisation",
@@ -9,7 +11,7 @@ const ressources = {
       <>
         Remplace le
         {" "}
-        <strong>lancer de dé</strong>
+        <strong>{motsCles.lancerDeDe}</strong>
       </>
     ),
     exterieur: (
