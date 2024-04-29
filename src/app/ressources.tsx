@@ -27,6 +27,7 @@ const ressources = {
         S'utilise chez
         {" "}
         <strong>Iglea</strong>
+        .
       </>
     ),
     igloo: (

@@ -170,12 +170,13 @@ const outils: Outil[] = [
       <>
         Ce poêle fait fondre une boîte par
         {" "}
+        {/* Le faire s'éteindre après deux boîtes consommées? */}
         <strong>ronde</strong>
         . Un pingouin doit venir l'éteindre.
       </>
     ),
     image: poele,
-    momentUtilisation: ressources.endroitsUtilisation.igloo,
+    momentUtilisation: ressources.endroitsUtilisation.interieur,
     nom: "Poêle à bois",
   },
   {
