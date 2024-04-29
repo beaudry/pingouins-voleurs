@@ -254,7 +254,7 @@ const outils: Outil[] = [
         .
       </>
     ),
-    momentUtilisation: ressources.endroitsUtilisation.nImporteQuand,
+    momentUtilisation: ressources.endroitsUtilisation.exterieur,
     nom: "Canne à pêche",
   },
   {
