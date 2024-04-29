@@ -233,8 +233,8 @@ const outils: Outil[] = [
         à son tour.
       </>
     ),
-    momentUtilisation: ressources.endroitsUtilisation.nImporteQuand,
-    nom: "Calmar délicieux",
+    momentUtilisation: ressources.endroitsUtilisation.exterieur,
+    nom: "Calmar Alléchant N°5 ",
   },
   {
     apresUtilisation: ressources.apresUtilisations.defausser,
