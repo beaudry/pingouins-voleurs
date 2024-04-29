@@ -183,22 +183,21 @@ const outils: Outil[] = [
     apresUtilisation: ressources.apresUtilisations.defausser,
     description: (
       <>
-        Permet de transporter une
+        Permet d'acquérir et de transporter
         {" "}
-        {motsCles.boite}
+        <strong>
+          deux
+          {" "}
+          {motsCles.boite}
+          s
+        </strong>
         {" "}
-        supplémentaire.
+        en même temps.
       </>
     ),
     image: sac,
-    momentUtilisation: (
-      <>
-        S'utilise chez
-        {" "}
-        <strong>Iglea</strong>
-      </>
-    ),
-    nom: "Sac à dos",
+    momentUtilisation: ressources.endroitsUtilisation.iglea,
+    nom: "Sac fidélité",
   },
   {
     apresUtilisation: ressources.apresUtilisations.defausser,
