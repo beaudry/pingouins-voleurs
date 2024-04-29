@@ -86,21 +86,21 @@ const outils: Outil[] = [
       </>
     ),
     image: charrue,
-    momentUtilisation: ressources.endroitsUtilisation.apresDeplacement,
+    momentUtilisation: ressources.endroitsUtilisation.exterieur,
     nom: "Charrue",
   },
   {
     apresUtilisation: ressources.apresUtilisations.defausser,
     description: (
       <>
-        Utilise cette peinture pour te camoufler. Un pingouin
+        Utilise-la pour te camoufler. Le propriétaire
         {" "}
         <strong>ne verra pas</strong>
         {" "}
         que tu es chez lui.
       </>
     ),
-    momentUtilisation: ressources.endroitsUtilisation.igloo,
+    momentUtilisation: ressources.endroitsUtilisation.interieur,
     nom: "Peinture blanche",
   },
   {
