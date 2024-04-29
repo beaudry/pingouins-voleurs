@@ -11,6 +11,6 @@
 - Les items s'utilisent toujours au début de son tour, avant le lancer de dé.
 - Si quelqu'un **tombe** alors qu'il **transportait** une boîte, celle-ci est mélangée parmis les cartes restantes d'Iglea.
 
-## Cadeaux
+### Cadeaux
 Quand un item est laissé en cadeau dans chez un pingouin, il pourra l'ajouter à son inventaire la prochaine fois qu'il sera chez lui.
 
