@@ -45,7 +45,11 @@ const outils: Outil[] = [
     apresUtilisation: ressources.apresUtilisations.inventaireProprietaire,
     description: (
       <>
-        Échange-la contre la boîte de ton choix.
+        Échange-la contre la
+        {" "}
+        {motsCles.boite}
+        {" "}
+        de ton choix.
       </>
     ),
     image: truite,
@@ -120,7 +124,7 @@ const outils: Outil[] = [
       </>
     ),
     image: canon,
-    momentUtilisation: ressources.endroitsUtilisation.nImporteQuand,
+    momentUtilisation: ressources.endroitsUtilisation.exterieur,
     nom: "Canon à neige",
   },
   {
@@ -139,6 +143,8 @@ const outils: Outil[] = [
         s et de choisir laquelle prendre.
       </>
     ),
+    // On décide au début de son tour si on prend une boîte chez Iglea ou non. Cela va rajouter un peu de stratégie
+    // car les autres joueurs ne sauront pas si on va avoir les mains pleines ou non à notre prochain tour.
     momentUtilisation: ressources.endroitsUtilisation.iglea,
     nom: "Photo comprommettante",
   },
