@@ -1,26 +1,23 @@
 const ressources = {
   apresUtilisations: {
     defausser: "Défausser après utilisation",
-    inventaireProprietaire: (
+    inventaireProprietaire: "Laisser en cadeau",
+  },
+
+  endroitsUtilisation: {
+    apresDeplacement: (
       <>
-        Placer dans
+        Remplace le
         {" "}
-        <strong>l'inventaire</strong>
-        {" "}
-        du propriétaire
+        <strong>lancer de dé</strong>
       </>
     ),
-  },
-  momentsUtilisations: {
-    apresDeplacement: (
+    exterieur: (
       <>
         S'utilise
         {" "}
-        <strong>avant</strong>
-        {" "}
-        un
-        {" "}
-        <strong>déplacement</strong>
+        <strong>sur le chemin</strong>
+        .
       </>
     ),
     iglea: (
@@ -35,6 +32,14 @@ const ressources = {
         S'utilise dans un
         {" "}
         <strong>igloo</strong>
+      </>
+    ),
+    interieur: (
+      <>
+        S'utilise
+        {" "}
+        <strong>dans un igloo</strong>
+        .
       </>
     ),
     nImporteQuand: (

@@ -6,7 +6,6 @@ import pelle from "../images/pelle.jfif";
 import perceuse from "../images/perceuse.jfif";
 import tuque from "../images/tuque.jfif";
 import poele from "../images/poele.jfif";
-import patins from "../images/patins.jfif";
 import sac from "../images/sac.jfif";
 import truite from "../images/truite.jfif";
 import ressources from "./ressources";
@@ -25,38 +24,6 @@ const outils: Outil[] = [
     apresUtilisation: ressources.apresUtilisations.defausser,
     description: (
       <>
-        Ces patins t'empêchent d'échapper ta
-        {" "}
-        {motsCles.boite}
-        {" "}
-        si tu
-        {" "}
-        <strong>atteris</strong>
-        {" "}
-        sur une
-        {" "}
-        <strong>case glacée</strong>
-        .
-      </>
-    ),
-    image: patins,
-    momentUtilisation: (
-      <>
-        S'utilisent
-        {" "}
-        <strong>lors</strong>
-        {" "}
-        d'un
-        {" "}
-        <strong>déplacement</strong>
-      </>
-    ),
-    nom: "Patins à glace",
-  },
-  {
-    apresUtilisation: ressources.apresUtilisations.defausser,
-    description: (
-      <>
         Lance cette pierre sur
         {" "}
         <strong>un chemin</strong>
@@ -71,43 +38,37 @@ const outils: Outil[] = [
       </>
     ),
     image: curling,
-    momentUtilisation: ressources.momentsUtilisations.nImporteQuand,
+    momentUtilisation: ressources.endroitsUtilisation.exterieur,
     nom: "Pierre de curling",
   },
   {
     apresUtilisation: ressources.apresUtilisations.inventaireProprietaire,
     description: (
       <>
-        Dépose-la
-        {" "}
-        <strong>chez un pingouin</strong>
-        {" "}
-        et il va
-        {" "}
-        <strong>te laisser repartir</strong>
-        {" "}
-        avec la
-        {" "}
-        {motsCles.boite}
-        {" "}
-        de ton choix.
+        Échange-la contre la boîte de ton choix.
       </>
     ),
     image: truite,
-    momentUtilisation: ressources.momentsUtilisations.igloo,
+    momentUtilisation: ressources.endroitsUtilisation.interieur,
     nom: "Truite d'échange",
   },
   {
     apresUtilisation: ressources.apresUtilisations.defausser,
     description: (
       <>
-        Cet orque te catapulte jusqu'à
+        Cet orque te catapulte jusqu'à la case devant
         {" "}
         <strong>chez toi</strong>
         .
       </>
     ),
-    momentUtilisation: ressources.momentsUtilisations.nImporteQuand,
+    momentUtilisation: (
+      <>
+        {ressources.endroitsUtilisation.exterieur}
+        {" "}
+        {ressources.endroitsUtilisation.apresDeplacement}
+      </>
+    ),
     nom: "Orque",
   },
   {
@@ -125,7 +86,7 @@ const outils: Outil[] = [
       </>
     ),
     image: charrue,
-    momentUtilisation: ressources.momentsUtilisations.apresDeplacement,
+    momentUtilisation: ressources.endroitsUtilisation.apresDeplacement,
     nom: "Charrue",
   },
   {
@@ -139,7 +100,7 @@ const outils: Outil[] = [
         que tu es chez lui.
       </>
     ),
-    momentUtilisation: ressources.momentsUtilisations.igloo,
+    momentUtilisation: ressources.endroitsUtilisation.igloo,
     nom: "Peinture blanche",
   },
   {
@@ -159,7 +120,7 @@ const outils: Outil[] = [
       </>
     ),
     image: canon,
-    momentUtilisation: ressources.momentsUtilisations.nImporteQuand,
+    momentUtilisation: ressources.endroitsUtilisation.nImporteQuand,
     nom: "Canon à neige",
   },
   {
@@ -178,7 +139,7 @@ const outils: Outil[] = [
         s et de choisir laquelle prendre.
       </>
     ),
-    momentUtilisation: ressources.momentsUtilisations.iglea,
+    momentUtilisation: ressources.endroitsUtilisation.iglea,
     nom: "Photo comprommettante",
   },
   {
@@ -197,7 +158,7 @@ const outils: Outil[] = [
       </>
     ),
     image: pelle,
-    momentUtilisation: ressources.momentsUtilisations.apresDeplacement,
+    momentUtilisation: ressources.endroitsUtilisation.apresDeplacement,
     nom: "Pelle",
   },
   {
@@ -265,7 +226,7 @@ const outils: Outil[] = [
       </>
     ),
     image: poele,
-    momentUtilisation: ressources.momentsUtilisations.igloo,
+    momentUtilisation: ressources.endroitsUtilisation.igloo,
     nom: "Poêle à bois",
   },
   {
@@ -346,13 +307,13 @@ const outils: Outil[] = [
         à son tour.
       </>
     ),
-    momentUtilisation: ressources.momentsUtilisations.nImporteQuand,
+    momentUtilisation: ressources.endroitsUtilisation.nImporteQuand,
     nom: "Calmar délicieux",
   },
   {
     apresUtilisation: ressources.apresUtilisations.defausser,
     description: <>Dévoile une case de ton choix.</>,
-    momentUtilisation: ressources.momentsUtilisations.nImporteQuand,
+    momentUtilisation: ressources.endroitsUtilisation.nImporteQuand,
     nom: "Carte au trésor",
   },
   {
@@ -373,7 +334,7 @@ const outils: Outil[] = [
         .
       </>
     ),
-    momentUtilisation: ressources.momentsUtilisations.nImporteQuand,
+    momentUtilisation: ressources.endroitsUtilisation.nImporteQuand,
     nom: "Canne à pêche",
   },
   {
@@ -448,7 +409,7 @@ const outils: Outil[] = [
         reste sur la case.
       </>
     ),
-    momentUtilisation: ressources.momentsUtilisations.nImporteQuand,
+    momentUtilisation: ressources.endroitsUtilisation.nImporteQuand,
     nom: "Boule de neige",
   },
 ];
