@@ -261,56 +261,6 @@ const outils: Outil[] = [
     apresUtilisation: ressources.apresUtilisations.defausser,
     description: (
       <>
-        Empêchent les pingouins
-        {" "}
-        <strong>d'entrer</strong>
-        {" "}
-        ou de
-        {" "}
-        <strong>sortir</strong>
-        {" "}
-        de l'igloo jusqu'à
-        {" "}
-        <strong>ton prochain tour</strong>
-        .
-      </>
-    ),
-    momentUtilisation: (
-      <>
-        S'utilise
-        {" "}
-        <strong>à la porte</strong>
-        {" "}
-        ou dans un
-        {" "}
-        <strong>igloo</strong>
-      </>),
-    nom: "Planches de bois",
-  },
-  {
-    apresUtilisation: ressources.apresUtilisations.defausser,
-    description: (
-      <>
-        Permet de
-        {" "}
-        <strong>boucher un trou</strong>
-        {" "}
-        de façon permanente.
-      </>
-    ),
-    momentUtilisation: (
-      <>
-        S'utilise sur une
-        {" "}
-        <strong>case trou</strong>
-      </>
-    ),
-    nom: "Gros bouchon de liège",
-  },
-  {
-    apresUtilisation: ressources.apresUtilisations.defausser,
-    description: (
-      <>
         Fais
         {" "}
         {motsCles.tomber}
