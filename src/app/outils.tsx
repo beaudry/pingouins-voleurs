@@ -3,7 +3,6 @@ import charrue from "../images/charrue.jfif";
 import canon from "../images/canon.jfif";
 import curling from "../images/curling.jfif";
 import perceuse from "../images/perceuse.jfif";
-import tuque from "../images/tuque.jfif";
 import poele from "../images/poele.jfif";
 import sac from "../images/sac.jfif";
 import truite from "../images/truite.jfif";
@@ -164,32 +163,6 @@ const outils: Outil[] = [
     image: perceuse,
     momentUtilisation: ressources.endroitsUtilisation.exterieur,
     nom: "Perceuse à glace",
-  },
-  {
-    apresUtilisation: (
-      <>
-        Garder dans ton
-        {" "}
-        <strong>inventaire</strong>
-      </>
-    ),
-    description: (
-      <>
-        Cette tuque est
-        {" "}
-        <strong>très jolie</strong>
-        .
-      </>
-    ),
-    image: tuque,
-    momentUtilisation: (
-      <>
-        S'utilise
-        {" "}
-        <strong>immédiatement</strong>
-      </>
-    ),
-    nom: "Tuque",
   },
   {
     apresUtilisation: ressources.apresUtilisations.inventaireProprietaire,
