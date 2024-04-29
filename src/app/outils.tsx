@@ -203,18 +203,18 @@ const outils: Outil[] = [
     apresUtilisation: ressources.apresUtilisations.defausser,
     description: (
       <>
-        Glisse
+        Glisse dans une direction jusqu'à
         {" "}
-        <strong>jusqu'au bout</strong>
+        <strong>l'extrémité</strong>
         {" "}
-        d'un chemin.
+        .
       </>
     ),
     momentUtilisation: (
       <>
-        <strong>Remplace</strong>
+        {ressources.endroitsUtilisation.exterieur}
         {" "}
-        un lancer de dé
+        {ressources.endroitsUtilisation.apresDeplacement}
       </>
     ),
     nom: "Carzy Carpet",
