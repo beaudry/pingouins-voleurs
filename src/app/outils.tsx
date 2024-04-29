@@ -1,77 +1,23 @@
-import "./app.css";
 import { ComponentChildren } from "preact";
-import charrue from "./images/charrue.jfif";
-import canon from "./images/canon.jfif";
-import curling from "./images/curling.jfif";
-import pelle from "./images/pelle.jfif";
-import perceuse from "./images/perceuse.jfif";
-import tuque from "./images/tuque.jfif";
-import poele from "./images/poele.jfif";
-import patins from "./images/patins.jfif";
-import sac from "./images/sac.jfif";
-import truite from "./images/truite.jfif";
+import charrue from "../images/charrue.jfif";
+import canon from "../images/canon.jfif";
+import curling from "../images/curling.jfif";
+import pelle from "../images/pelle.jfif";
+import perceuse from "../images/perceuse.jfif";
+import tuque from "../images/tuque.jfif";
+import poele from "../images/poele.jfif";
+import patins from "../images/patins.jfif";
+import sac from "../images/sac.jfif";
+import truite from "../images/truite.jfif";
+import ressources from "./ressources";
+import motsCles from "./motsCles";
 
-const motsCles = {
-  boite: "boîte",
-  tombe: "tombe",
-  tomber: "tomber",
-};
-
-type Outil = {
+export type Outil = {
   apresUtilisation?: ComponentChildren,
   description?: ComponentChildren,
   momentUtilisation?: ComponentChildren,
   image?: string,
   nom: string,
-};
-
-const ressources = {
-  apresUtilisations: {
-    defausser: "Défausser après utilisation",
-    inventaireProprietaire: (
-      <>
-        Placer dans
-        {" "}
-        <strong>l'inventaire</strong>
-        {" "}
-        du propriétaire
-      </>
-    ),
-  },
-  momentsUtilisations: {
-    apresDeplacement: (
-      <>
-        S'utilise
-        {" "}
-        <strong>avant</strong>
-        {" "}
-        un
-        {" "}
-        <strong>déplacement</strong>
-      </>
-    ),
-    iglea: (
-      <>
-        S'utilise chez
-        {" "}
-        <strong>Iglea</strong>
-      </>
-    ),
-    igloo: (
-      <>
-        S'utilise dans un
-        {" "}
-        <strong>igloo</strong>
-      </>
-    ),
-    nImporteQuand: (
-      <>
-        S'utilise
-        {" "}
-        <strong>n'importe quand</strong>
-      </>
-    ),
-  },
 };
 
 const outils: Outil[] = [
@@ -281,7 +227,6 @@ const outils: Outil[] = [
       </>
     ),
     nom: "Perceuse à glace",
-
   },
   {
     apresUtilisation: (
@@ -508,24 +453,4 @@ const outils: Outil[] = [
   },
 ];
 
-function App() {
-  return (
-    <div style={{
-      alignItems: "flex-start", display: "flex", flexWrap: "wrap", gap: "0.5em",
-    }}
-    >
-      {outils.map((carte) => (
-        <div className="carte">
-          <h1>{carte.nom}</h1>
-          <div className="instructions">
-            <p><i>{carte.momentUtilisation}</i></p>
-            <p>{carte.description}</p>
-            <p><i>{carte.apresUtilisation}</i></p>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-export default App;
+export default outils;
