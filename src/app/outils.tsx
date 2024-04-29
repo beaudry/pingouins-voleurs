@@ -238,12 +238,6 @@ const outils: Outil[] = [
   },
   {
     apresUtilisation: ressources.apresUtilisations.defausser,
-    description: <>Dévoile une case de ton choix.</>,
-    momentUtilisation: ressources.endroitsUtilisation.nImporteQuand,
-    nom: "Carte au trésor",
-  },
-  {
-    apresUtilisation: ressources.apresUtilisations.defausser,
     description: (
       <>
         Vole un
