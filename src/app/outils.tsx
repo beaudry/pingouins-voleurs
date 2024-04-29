@@ -282,6 +282,26 @@ const outils: Outil[] = [
     momentUtilisation: ressources.endroitsUtilisation.nImporteQuand,
     nom: "Boule de neige",
   },
+  {
+    apresUtilisation: ressources.apresUtilisations.defausser,
+    description: (
+      <>
+        Jusqu'à ton
+        {" "}
+        <strong>prochain tour</strong>
+        ,
+        {" "}
+        <strong>toutes</strong>
+        {" "}
+        les cases vides sont
+        {" "}
+        <strong>glacées</strong>
+        .
+      </>
+    ),
+    momentUtilisation: ressources.endroitsUtilisation.exterieur,
+    nom: "Journée patinoire",
+  },
 ];
 
 export default outils;
