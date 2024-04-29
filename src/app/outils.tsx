@@ -263,7 +263,7 @@ const outils: Outil[] = [
       <>
         Fais
         {" "}
-        {motsCles.tomber}
+        <strong>{motsCles.tomber}</strong>
         {" "}
         un pingouin qui
         {" "}
@@ -272,14 +272,10 @@ const outils: Outil[] = [
         une
         {" "}
         {motsCles.boite}
-        . La
-        {" "}
-        {motsCles.boite}
-        {" "}
-        reste sur la case.
+        .
       </>
     ),
-    momentUtilisation: ressources.endroitsUtilisation.nImporteQuand,
+    momentUtilisation: ressources.endroitsUtilisation.exterieur,
     nom: "Boule de neige",
   },
   {
